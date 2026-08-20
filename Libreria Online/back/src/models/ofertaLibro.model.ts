@@ -1,5 +1,5 @@
 import { Decimal } from "@prisma/client/runtime/client";
-import { EstadoOferta, CategoriaLibro } from "../prisma/enums.js";
+import { EstadoOferta, CategoriaLibro } from "../prisma/enums";
 
 export class OfertaLibro {
   id!: number;
