@@ -1,4 +1,4 @@
-import { CategoriaLibro } from '../prisma/enums';
+import { CategoriaLibro } from '../prisma/enums.js';
  
 export class Libro {
     id!: number;

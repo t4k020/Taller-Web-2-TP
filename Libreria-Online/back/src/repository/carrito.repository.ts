@@ -1,6 +1,6 @@
 import { Libro } from "../models/libro.model.js";
 import { prisma } from "../prisma.js";
-import { Prisma } from "../prisma/client";
+import { Prisma } from "../prisma/client.js";
 
 export class CarritoRepository {
   async findCarritoByID(id: number) {

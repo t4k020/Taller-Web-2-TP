@@ -1,5 +1,5 @@
 import { prisma } from "../prisma.js";
-import { Prisma } from "../prisma/client";
+import { Prisma } from "../prisma/client.js";
 
 export class CompradorRepository {
   async findAllComppradores() {
