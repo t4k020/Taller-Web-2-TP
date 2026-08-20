@@ -7,7 +7,6 @@
     "seed": "bun ./prisma/seed.ts"
   },
   "scripts": {
-    
     "dev": "tsx watch src/index.ts",
     "build": "npx prisma generate && tsc",
     "start": "node dist/index.js",
