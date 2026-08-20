@@ -1,5 +1,5 @@
-import { Libro } from "../models/libro.model";
-import { prisma } from "../prisma";
+import { Libro } from "../models/libro.model.js";
+import { prisma } from "../prisma.js";
 import { Prisma } from "../prisma/client";
 
 export class CarritoRepository {

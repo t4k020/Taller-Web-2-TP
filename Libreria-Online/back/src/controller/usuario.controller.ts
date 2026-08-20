@@ -1,6 +1,6 @@
 import { type Request, type Response } from "express";
 import { UsuarioRepository } from "../repository/usuario.repository.js";
-import { UsuarioService } from "../services/usuario.service";
+import { UsuarioService } from "../services/usuario.service.js";
 
 const usuarioRepository = new UsuarioRepository();
 const usuarioService = new UsuarioService(usuarioRepository);
