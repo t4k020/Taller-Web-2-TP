@@ -1,6 +1,0 @@
-@echo off
-echo Iniciando el Backend...
-start cmd /k "cd back && npm run dev"
-
-echo Iniciando el Frontend en Angular...
-start cmd /k "cd front && ng serve"
