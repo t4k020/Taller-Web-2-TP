@@ -1,11 +1,10 @@
 import { prisma } from "../prisma.js";
-import { Prisma } from '../prisma/client.js'
+import type { Prisma } from "../prisma/client.js";
 
 type CarritoConDetalles = Prisma.CarritosGetPayload<{
   include: { detalles: true };
 }>;
 export class TransaccionRepository {
-
   async crear(compradorId: number, carrito: any, tx: any) {
     return await tx.transacciones.create({
       data: {
