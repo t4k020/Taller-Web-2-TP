@@ -1,20 +1,21 @@
+import { createRequire } from 'module';
 import pg from 'pg';
 import { PrismaPg } from '@prisma/adapter-pg';
-import PrismaPackage from '@prisma/client';
 import { config } from './config/config.js';
 
-// Extraer PrismaClient para compatibilidad ESM en Vercel
-const { PrismaClient } = PrismaPackage;
+// Cargar PrismaClient usando el resolver CJS de Node para evitar el SyntaxError en ESM
+const require = createRequire(import.meta.url);
+const { PrismaClient } = require('@prisma/client');
 
-// 1. Crear el Pool de conexiones con la librería 'pg'
+// 1. Configurar el pool de Postgres
 const pool = new pg.Pool({
   connectionString: config.db,
 });
 
-// 2. Inicializar el adaptador de Prisma pasándole el pool
+// 2. Instanciar el adaptador de Prisma
 const adapter = new PrismaPg(pool);
 
-// 3. Crear la instancia de PrismaClient
+// 3. Crear e exportar la instancia de Prisma
 export const prisma = new PrismaClient({
   adapter,
 });
