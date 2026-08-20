@@ -1,5 +1,5 @@
-import { prisma } from "../prisma.js";
-import type { Prisma } from "../prisma/client.js";
+import { prisma } from '../prisma.js';
+import type { Prisma } from '../prisma/client.js';
 
 type CarritoConDetalles = Prisma.CarritosGetPayload<{
   include: { detalles: true };
